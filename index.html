@@ -1,166 +1,218 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eli'S'oft bootstrap template</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
 
-  </head>
-  <body>
-    <header id="header">
-        <nav class="navbar navbar-expand-md navbar-dark bg-danger py-2">
-            <div class="container">
-              <a class="navbar-brand" href="#">eli'S'oft</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto ">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Latest</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Blog</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Approach</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Team</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                  
-              </div>
-            </div>
-          </nav>
-    </header>
-    <section class="dark-bg " id="hero">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#baseModal').on('show.bs.modal', function (event) {
+        //  Get button data with event.relatedTarget
+        var button = $(event.relatedTarget)
+
+        //  Get username from button with data-username for each button.
+        var username = button.data('username')
+
+        //  Update <h> element value
+        $("#lead").html(username);
+      })
+    });
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>eli'S'oft bootstrap template</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+  <header id="header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger py-2">
       <div class="container">
+        <a class="navbar-brand" href="#">eli'S'oft</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Latest</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Approach</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <section class="dark-bg " id="hero">
+    <div class="container">
       <div class="d-flex h-100 flex-column text-light justify-content-center">
         <h1 class="display-2">eli'<span class="text-danger">S</span>'oft</h1>
-        <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. <span class="text-danger">Duis aute irure dolor in est nonluctus</span> reprehenderi. </p>
+        <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. <span
+            class="text-danger">Duis aute irure dolor in est nonluctus</span> reprehenderi. </p>
       </div>
-      </div>
-    </section>
-    <section class="generic" id="about">
-      <div class="container">
-        <h2 class="display-6 text-danger mb-5">WHO WE ARE</h2>
-        <div class="row mb-3">
-          <div class="col-8 bg-light">
-            <div class="d-flex h-100 flex-column justify-content-center">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde laudantium modi?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde laudantium modi?</p>
+    </div>
+  </section>
+  <section class="generic" id="about">
+    <div class="container">
+      <h2 class="display-6 text-danger mb-5">WHO WE ARE</h2>
+      <div class="row mb-3">
+        <div class="col-8 bg-light">
+          <div class="d-flex h-100 flex-column justify-content-center">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi
+              debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde
+              laudantium modi?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi
+              debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde
+              laudantium modi?</p>
 
-            </div>
           </div>
-          <div class="col-4 p-0">
-            <img class="img-fluid" src="./images/company2.jpg" >
-          </div>
-        
         </div>
-        <div class="row">
-          <div class="col-8 bg-light">
-            <div class="d-flex h-100 flex-column justify-content-center">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde laudantium modi?</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde laudantium modi?</p>
-              
+        <div class="col-4 p-0">
+          <img class="img-fluid" src="./images/company2.jpg">
+        </div>
 
-            </div>
+      </div>
+      <div class="row">
+        <div class="col-8 bg-light">
+          <div class="d-flex h-100 flex-column justify-content-center">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi
+              debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde
+              laudantium modi?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quidem suscipit cumque laborum, animi
+              debitis vel tempora, aperiam voluptatem ad aliquid quibusdam natus reprehenderit rem officiis minus unde
+              laudantium modi?</p>
+
+
           </div>
-          <div class="col-4 order-first p-0">
-            <img class="img-fluid" src="./images/company.jpg" >
+        </div>
+        <div class="col-4 order-first p-0">
+          <img class="img-fluid" src="./images/company.jpg">
+        </div>
+
+        <section id="latest">
+          <div class="container">
+            <h2 class="display-6 text-danger mb-5">WHAT WE DO</h2>
           </div>
+          <div class="container-fluid">
 
-          <section id="latest">
-            <div class="container">
-              <h2 class="display-6 text-danger mb-5">WHAT WE DO</h2>
-            </div>
-            <div class="container-fluid">
+            <div class="row">
+              <div class="col p-0">
+                <div class="latest-item">
+                  <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#itemDetail1" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    <img src="./images/1.jpg" class="img-fluid">
 
-              <div class="row">
-                <div class="col p-0">
-                  <div class="latest-item">
-                    <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#itemDetail1" aria-expanded="false" aria-controls="collapseExample">
-                      <img src="./images/1.jpg" class="img-fluid">
-                      
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                          </svg>
-                        </div>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="col p-0">
-                  <div class="latest-item">
-                    <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#itemDetail2" aria-expanded="false" aria-controls="collapseExample">
-                      <img src="./images/2.jpg" class="img-fluid">
-                      
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                          </svg>
-                        </div>
-                    </button>
-                  </div>
-                </div>
-                <div class="col p-0">
-                  <div class="latest-item">
-                    <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#itemDetail3" aria-expanded="false" aria-controls="collapseExample">
-                      <img src="./images/3.jpg" class="img-fluid">
-                      
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                          </svg>
-                        </div>
-                    </button>
-                  </div>
-                </div>
-
-                <div class="col p-0">
-                  <div class="latest-item">
-                    <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#itemDetail4" aria-expanded="false" aria-controls="collapseExample">
-                      <img src="./images/4.jpg" class="img-fluid">
-
-                      <div class="overlay">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                          <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                          <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                        </svg>
-                      </div>
-
-                      
-                        <div class="overlay d-flex align-items-center justify-content-center">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                            <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
-                          </svg>
-                        </div>
-                    </button>
-                  </div>
+                    <div class="overlay d-flex align-items-center justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                          d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </div>
+                  </button>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="collapse" id="itemDetail1">
-                  <div class="container-fluid mt-2 p-0">
-                    <div class="row p-0 shadow ">
-                      <div class="col p-0">
-                        <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#itemDetail1" aria-expanded="false" aria-controls="collapseExample"></button>
+              <div class="col p-0">
+                <div class="latest-item">
+                  <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#itemDetail2" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    <img src="./images/2.jpg" class="img-fluid">
+
+                    <div class="overlay d-flex align-items-center justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                          d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+              <div class="col p-0">
+                <div class="latest-item">
+                  <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#itemDetail3" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    <img src="./images/3.jpg" class="img-fluid">
+
+                    <div class="overlay d-flex align-items-center justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                          d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+
+              <div class="col p-0">
+                <div class="latest-item">
+                  <button class="btn btn-primary p-0 rounded-0 border-0 shadow-none" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#itemDetail4" aria-expanded="false"
+                    aria-controls="collapseExample">
+                    <img src="./images/4.jpg" class="img-fluid">
+
+                    <div class="overlay">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                          d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </div>
+
+
+                    <div class="overlay d-flex align-items-center justify-content-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                        class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                          d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                        <path fill-rule="evenodd"
+                          d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="collapse" id="itemDetail1">
+                <div class="container-fluid mt-2 p-0">
+                  <div class="row p-0 shadow ">
+                    <div class="col p-0">
+                      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                        data-bs-target="#itemDetail1" aria-expanded="false" aria-controls="collapseExample"></button>
                       <dl class="row ps-3">
                         <dt class="col-12"><span class="text-danger lead">PROJECT NAME</span></dt>
                         <dt class="col-4">CLIENT</dt>
@@ -170,27 +222,28 @@
                         <dt class="col-4">DURATION</dt>
                         <dd class="col-8">2 weeks</dd>
                       </dl>
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/5.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/6.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/7.jpg" class="img-fluid">
-                      </div>
                     </div>
-                    
+                    <div class="col p-0">
+                      <img src="./images/5.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/6.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/7.jpg" class="img-fluid">
+                    </div>
                   </div>
-                  
+
                 </div>
 
-                <div class="collapse" id="itemDetail2">
-                  <div class="container-fluid mt-2 p-0">
-                    <div class="row p-0 shadow">
-                      <div class="col p-0">
-                        <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#itemDetail2" aria-expanded="false" aria-controls="collapseExample"></button>
+              </div>
+
+              <div class="collapse" id="itemDetail2">
+                <div class="container-fluid mt-2 p-0">
+                  <div class="row p-0 shadow">
+                    <div class="col p-0">
+                      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                        data-bs-target="#itemDetail2" aria-expanded="false" aria-controls="collapseExample"></button>
                       <dl class="row ps-3">
                         <dt class="col-12"><span class="text-danger lead">PROJECT NAME 2</span></dt>
                         <dt class="col-4">CLIENT</dt>
@@ -200,27 +253,28 @@
                         <dt class="col-4">DURATION</dt>
                         <dd class="col-8">2 weeks</dd>
                       </dl>
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/5.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/6.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/7.jpg" class="img-fluid">
-                      </div>
                     </div>
-                    
+                    <div class="col p-0">
+                      <img src="./images/5.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/6.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/7.jpg" class="img-fluid">
+                    </div>
                   </div>
-                  
+
                 </div>
 
-                <div class="collapse" id="itemDetail3">
-                  <div class="container-fluid mt-2 p-0">
-                    <div class="row p-0 shadow">
-                      <div class="col p-0">
-                        <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#itemDetail3" aria-expanded="false" aria-controls="collapseExample"></button>
+              </div>
+
+              <div class="collapse" id="itemDetail3">
+                <div class="container-fluid mt-2 p-0">
+                  <div class="row p-0 shadow">
+                    <div class="col p-0">
+                      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                        data-bs-target="#itemDetail3" aria-expanded="false" aria-controls="collapseExample"></button>
                       <dl class="row ps-3 ">
                         <dt class="col-12"><span class="text-danger lead">PROJECT NAME 3</span></dt>
                         <dt class="col-4">CLIENT</dt>
@@ -230,27 +284,28 @@
                         <dt class="col-4">DURATION</dt>
                         <dd class="col-8">2 weeks</dd>
                       </dl>
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/5.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/6.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/7.jpg" class="img-fluid">
-                      </div>
                     </div>
-                    
+                    <div class="col p-0">
+                      <img src="./images/5.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/6.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/7.jpg" class="img-fluid">
+                    </div>
                   </div>
-                  
+
                 </div>
 
-                <div class="collapse" id="itemDetail4">
-                  <div class="container-fluid mt-2 p-0">
-                    <div class="row p-0 shadow">
-                      <div class="col p-0">
-                        <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse" data-bs-target="#itemDetail4" aria-expanded="false" aria-controls="collapseExample"></button>
+              </div>
+
+              <div class="collapse" id="itemDetail4">
+                <div class="container-fluid mt-2 p-0">
+                  <div class="row p-0 shadow">
+                    <div class="col p-0">
+                      <button type="button" class="btn-close" aria-label="Close" data-bs-toggle="collapse"
+                        data-bs-target="#itemDetail4" aria-expanded="false" aria-controls="collapseExample"></button>
                       <dl class="row ps-3">
                         <dt class="col-12"><span class="text-danger lead">PROJECT NAME 4</span></dt>
                         <dt class="col-4">CLIENT</dt>
@@ -260,492 +315,417 @@
                         <dt class="col-4">DURATION</dt>
                         <dd class="col-8">2 weeks</dd>
                       </dl>
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/5.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/6.jpg" class="img-fluid">
-                      </div>
-                      <div class="col p-0">
-                        <img src="./images/7.jpg" class="img-fluid">
-                      </div>
                     </div>
-                    
+                    <div class="col p-0">
+                      <img src="./images/5.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/6.jpg" class="img-fluid">
+                    </div>
+                    <div class="col p-0">
+                      <img src="./images/7.jpg" class="img-fluid">
+                    </div>
                   </div>
-                  
-                </div>
 
-
-            
-              </div>
-            </div>
-          </section>
-
-        </div>
-        </div>
-
-
-        <!-- yorum satırı eklemek için aynı anda ctrl + c + k basıyoruz. -->
-        <!-- BLOG SECTİON -->
-        <!-- section#blog.generic>.container>h2.display-5.text-danger.mb-5+.row>.col*3 + tab bas. kısayol yazım şekli (emmet) -->
-        
-        <section id="blog" class="generic">
-          <div class="container">
-            <h2 class="display-5 text-danger mb-5">WHAT WE SAY</h2>
-            <div class="row">
-              <div class="col">
-
-                <div class="card bg-light border-0 ">
-                  <img src="./images/blog1.jpg" class="card-img-top rounded-0" >
-                  <div class="card-bod ps-3">
-                    <h5 class="lead text-upppercase text-danger mb-4">
-                      5 OUTRAGEOUS IDEAS FOR YOUR TECHNOLOGY
-                    </h5>
-                    <h6 class="card-title text-danger">
-                      ARMANDO DIEGO 
-                    </h6>
-                    <p class="card-text">
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...
-                    </p>
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <small class="text-muted">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-                          </svg>
-                          <span class="align-middle">
-                            2 days ago | 
-                          </span>
-                          
-                        </i>
-                      </small>
-                      </li>
-                      <li class="list-inline-item">
-                        <small class="text-muted">
-                          <span class="align-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
-                              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                              <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
-                            </svg>
-                            10
-                          </span>
-                          
-                        </small>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
 
               </div>
-              <div class="col">
-                <div class="card bg-light border-0 ">
-                  <img src="./images/blog1.jpg" class="card-img-top rounded-0" >
-                  <div class="card-bod ps-3">
-                    <h5 class="lead text-upppercase text-danger mb-4">
-                      5 OUTRAGEOUS IDEAS FOR YOUR TECHNOLOGY
-                    </h5>
-                    <h6 class="card-title text-danger">
-                      ARMANDO DIEGO 
-                    </h6>
-                    <p class="card-text">
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...
-                    </p>
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <small class="text-muted">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-                          </svg>
-                          <span class="align-middle">
-                            2 days ago | 
-                          </span>
-                          
-                        </i>
-                      </small>
-                      </li>
-                      <li class="list-inline-item">
-                        <small class="text-muted">
-                          <span class="align-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
-                              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                              <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
-                            </svg>
-                            10
-                          </span>
-                          
-                        </small>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card bg-light border-0 ">
-                  <img src="./images/blog1.jpg" class="card-img-top rounded-0" >
-                  <div class="card-bod ps-3">
-                    <h5 class="lead text-upppercase text-danger mb-4">
-                      5 OUTRAGEOUS IDEAS FOR YOUR TECHNOLOGY
-                    </h5>
-                    <h6 class="card-title text-danger">
-                      ARMANDO DIEGO 
-                    </h6>
-                    <p class="card-text">
-                      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...
-                    </p>
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <small class="text-muted">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
-                            <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
-                            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
-                          </svg>
-                          <span class="align-middle">
-                            2 days ago | 
-                          </span>
-                          
-                        </i>
-                      </small>
-                      </li>
-                      <li class="list-inline-item">
-                        <small class="text-muted">
-                          <span class="align-middle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
-                              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                              <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z"/>
-                            </svg>
-                            10
-                          </span>
-                          
-                        </small>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>      
 
-        <!-- divider section -->
-        <section id="divider" class="generic dark-bg">
-          <div class="container">
-            <div class="row">
-              <div class="col-8 offset-2">
-                <form>
-                <div class="input-group input-group-lg">
-                  <input type"email" class="form-control rounded-0 border-danger text-light bg-transparent" placeholder="@JOIN NEWSLETTER"> 
-                  <span class="input-group-btn input-group-lg">
-                    <input type="submit" class="btn btn-danger rounded-0 text-white border-danger" value="SUBSCRIBE">
-                  </span>
-                  <!-- css kısmında dark-bgye özellik verdiğimiz için burada dark-bg kullandığımız gibi arkaplan çok hızlı şekilde tekrar yazmamıza gerek kalmadan oluştu -->
-                </div>
-                </form>
-              </div>
+
+
             </div>
           </div>
         </section>
 
-        <!-- APPROACH SECTİON -->
-        
-        <section id="approach" class="generic">
-          <div class="container">
-            <h2 class="display-5 text-danger text-uppercase mb-5">HOW WE APPROACH</h2>
-            <div class="row">
-              <div class="col">
-                <div class="card bg-light border-0">
-                  <img src="./images/design.jpg" class="img-fluid card-img-top rounded-0">
-                  <div class="card-body">
-                    <h5 class="lead text-danger text-uppercase mb-4">Desing approach</h5>
-                    <div class="accordion accordion-flush" id="accordionFlushExample">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      </div>
+    </div>
+
+
+    <!-- yorum satırı eklemek için aynı anda ctrl + c + k basıyoruz. -->
+    <!-- BLOG SECTİON -->
+    <!-- section#blog.generic>.container>h2.display-5.text-danger.mb-5+.row>.col*3 + tab bas. kısayol yazım şekli (emmet) -->
+
+    <section id="blog" class="generic">
+      <div class="container">
+        <h2 class="display-5 text-danger mb-5">WHAT WE SAY</h2>
+        <div class="row">
+          <div class="col">
+
+            <div class="card bg-light border-0 ">
+              <img src="./images/blog1.jpg" class="card-img-top rounded-0">
+              <div class="card-bod ps-3">
+                <h5 class="lead text-upppercase text-danger mb-4">
+                  5 OUTRAGEOUS IDEAS FOR YOUR TECHNOLOGY
+                </h5>
+                <h6 class="card-title text-danger">
+                  ARMANDO DIEGO
+                </h6>
+                <p class="card-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam
+                  rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...
+                </p>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <small class="text-muted">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                      </svg>
+                      <span class="align-middle">
+                        2 days ago |
+                      </span>
+
+                      </i>
+                    </small>
+                  </li>
+                  <li class="list-inline-item">
+                    <small class="text-muted">
+                      <span class="align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        10
+                      </span>
+
+                    </small>
+                  </li>
+                </ul>
               </div>
-              <div class="col">
-                <div class="card bg-light border-0">
-                  <img src="./images/development.jpg" class="img-fluid card-img-top rounded-0">
-                  <div class="card-body">
-                    <h5 class="lead text-danger text-uppercase mb-4">Development approach</h5>
-                    <div class="accordion accordion-flush" id="accordionFlushExample2">
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFour">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-                            Accordion Item #4
-                          </button>
-                        </h2>
-                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample2">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingFive">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-                            Accordion Item #5
-                          </button>
-                        </h2>
-                        <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample2">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingSix">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-                            Accordion Item #6
-                          </button>
-                        </h2>
-                        <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample2">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            </div>
+
+          </div>
+          <div class="col">
+            <div class="card bg-light border-0 ">
+              <img src="./images/blog1.jpg" class="card-img-top rounded-0">
+              <div class="card-bod ps-3">
+                <h5 class="lead text-upppercase text-danger mb-4">
+                  5 OUTRAGEOUS IDEAS FOR YOUR TECHNOLOGY
+                </h5>
+                <h6 class="card-title text-danger">
+                  ARMANDO DIEGO
+                </h6>
+                <p class="card-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam
+                  rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...
+                </p>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <small class="text-muted">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                      </svg>
+                      <span class="align-middle">
+                        2 days ago |
+                      </span>
+
+                      </i>
+                    </small>
+                  </li>
+                  <li class="list-inline-item">
+                    <small class="text-muted">
+                      <span class="align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        10
+                      </span>
+
+                    </small>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </section>
+          <div class="col">
+            <div class="card bg-light border-0 ">
+              <img src="./images/blog1.jpg" class="card-img-top rounded-0">
+              <div class="card-bod ps-3">
+                <h5 class="lead text-upppercase text-danger mb-4">
+                  5 OUTRAGEOUS IDEAS FOR YOUR TECHNOLOGY
+                </h5>
+                <h6 class="card-title text-danger">
+                  ARMANDO DIEGO
+                </h6>
+                <p class="card-text">
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam
+                  rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto ...
+                </p>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <small class="text-muted">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z" />
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z" />
+                      </svg>
+                      <span class="align-middle">
+                        2 days ago |
+                      </span>
 
-        <!-- team section with modal structure -->
+                      </i>
+                    </small>
+                  </li>
+                  <li class="list-inline-item">
+                    <small class="text-muted">
+                      <span class="align-middle">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-chat-left-text" viewBox="0 0 16 16">
+                          <path
+                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z" />
+                          <path
+                            d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zM3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6zm0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
+                        </svg>
+                        10
+                      </span>
 
-        <section id="team" class="generic">
-          <div class="container">
-            <h2 class="display-5 text-danger mb-5">THE TEAM</h2>
-          </div>
-          <div class="container-fluid">
-            <div class="row">
-               <!-- butonun var olduğu sütunun tamamını kapsaması için grid classını kullanıyoruz-->
-              <div class="col p-0">
-               <div class="d-grid bg-danger py-5">
-                <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-danger rounded-0 py-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                     <span class="lead">DESIGNER </span>
-                  </button> 
-               </div>
-              </div>
-              <div class="col p-0">
-                <div class="d-grid bg-warning py-5">
-                  <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-warning rounded-0 py-5" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                       <span class="lead">DEVELOPER</span>
-                    </button> 
-                 </div>
-              </div>
-              <div class="col p-0">
-                <div class="d-grid bg-success py-5">
-                  <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-success rounded-0 py-5" data-bs-toggle="modal" data-bs-target="#exampleModal3">
-                       <span class="lead">ENGINEER </span>
-                    </button> 
-                 </div>
-              </div>
-              <div class="col p-0">
-                <div class="d-grid bg-info py-5">
-                  <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-info rounded-0 py-5" data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                       <span class="lead">ARTIST</span>
-                    </button> 
-                    <!-- buradaki butonlara bastıktan sonra ilgili modal yapısının açılması için  data-bs-target ile id'nin aynı olması gerekiyor-->
-                 </div>
+                    </small>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-
-          <!-- Modal 1 -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-      <div class="modal-body">
-        <img src="./images/team1.jpg" class="img-fluid">
-        <h5 class="lead text-danger mt-2">JANE MAYAKOVSKI</h5>
-        <p>Utilize the Bootstrap grid system within a modal by nesting .container-fluid within the .modal-body. Then, use the normal grid system classes as you would anywhere else.</p>
-        <ul class="list-unstyled ">
-          <li>Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet</li>
-          <ul>
-            <li>Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet</li>
-          </ul>
-          <li><li>Lorem ipsum dolor sit amet</li>
-        </ul>
-
-        <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-          <button type="button" class="btn btn-warning rounded-0">LINKEDIN</button>
-          <button type="button" class="btn btn-success rounded-0">GİTHUB</button>
-          <button type="button" class="btn btn-info rounded-0">TWİTTER</button>
         </div>
       </div>
-      
-    </div>
-  </div>
-</div>
+    </section>
 
-          <!-- Modal 2 -->
-          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          
-                <div class="modal-body">
-                  <img src="./images/team2.jpg" class="img-fluid">
-                  <h5 class="lead text-danger mt-2">JOHN DOE</h5>
-                  <p>Utilize the Bootstrap grid system within a modal by nesting .container-fluid within the .modal-body. Then, use the normal grid system classes as you would anywhere else.</p>
-                  <ul class="list-unstyled ">
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <li>Lorem ipsum dolor sit amet</li>
-                    <ul>
-                      <li>Lorem ipsum dolor sit amet</li>
-                    <li>Lorem ipsum dolor sit amet</li>
-                    </ul>
-                    <li><li>Lorem ipsum dolor sit amet</li>
-                  </ul>
-          
-                  <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-                    <button type="button" class="btn btn-warning rounded-0">LINKEDIN</button>
-                    <button type="button" class="btn btn-success rounded-0">GİTHUB</button>
-                    <button type="button" class="btn btn-info rounded-0">TWİTTER</button>
-                  </div>
-                </div>
-                
+    <!-- divider section -->
+    <section id="divider" class="generic dark-bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-8 offset-2">
+            <form>
+              <div class="input-group input-group-lg">
+                <input type"email" class="form-control rounded-0 border-danger text-light bg-transparent"
+                  placeholder="@JOIN NEWSLETTER">
+                <span class="input-group-btn input-group-lg">
+                  <input type="submit" class="btn btn-danger rounded-0 text-white border-danger" value="SUBSCRIBE">
+                </span>
+                <!-- css kısmında dark-bgye özellik verdiğimiz için burada dark-bg kullandığımız gibi arkaplan çok hızlı şekilde tekrar yazmamıza gerek kalmadan oluştu -->
               </div>
-            </div>
+            </form>
           </div>
-
-                    <!-- Modal 3-->
-<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
-      <div class="modal-body">
-        <img src="./images/team1.jpg" class="img-fluid">
-        <h5 class="lead text-info mt-2">PHOEBE</h5>
-        <p>Utilize the Bootstrap grid system within a modal by nesting .container-fluid within the .modal-body. Then, use the normal grid system classes as you would anywhere else.</p>
-        <ul class="list-unstyled ">
-          <li>Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet</li>
-          <ul>
-            <li>Lorem ipsum dolor sit amet</li>
-          <li>Lorem ipsum dolor sit amet</li>
-          </ul>
-          <li><li>Lorem ipsum dolor sit amet</li>
-        </ul>
-
-        <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-          <button type="button" class="btn btn-warning rounded-0">LINKEDIN</button>
-          <button type="button" class="btn btn-success rounded-0">GİTHUB</button>
-          <button type="button" class="btn btn-info rounded-0">TWİTTER</button>
         </div>
       </div>
-      
-    </div>
-  </div>
-</div>
+    </section>
 
-                   <!-- Modal 4-->
-                   <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  
-                        <div class="modal-body">
-                          <img src="./images/team2.jpg" class="img-fluid">
-                          <h5 class="lead text-info mt-2">JOEY</h5>
-                          <p>Utilize the Bootstrap grid system within a modal by nesting .container-fluid within the .modal-body. Then, use the normal grid system classes as you would anywhere else.</p>
-                          <ul class="list-unstyled ">
-                            <li>Lorem ipsum dolor sit amet</li>
-                            <li>Lorem ipsum dolor sit amet</li>
-                            <ul>
-                              <li>Lorem ipsum dolor sit amet</li>
-                            <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
-                            <li><li>Lorem ipsum dolor sit amet</li>
-                          </ul>
-                  
-                          <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
-                            <button type="button" class="btn btn-warning rounded-0">LINKEDIN</button>
-                            <button type="button" class="btn btn-success rounded-0">GİTHUB</button>
-                            <button type="button" class="btn btn-info rounded-0">TWİTTER</button>
-                          </div>
-                        </div>
-                        
+    <!-- APPROACH SECTİON -->
+
+    <section id="approach" class="generic">
+      <div class="container">
+        <h2 class="display-5 text-danger text-uppercase mb-5">HOW WE APPROACH</h2>
+        <div class="row">
+          <div class="col">
+            <div class="card bg-light border-0">
+              <img src="./images/design.jpg" class="img-fluid card-img-top rounded-0">
+              <div class="card-body">
+                <h5 class="lead text-danger text-uppercase mb-4">Desing approach</h5>
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                      </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
                       </div>
                     </div>
                   </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                      </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                      data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body.
+                        Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                      </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                      aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.
+                        Nothing more exciting happening here in terms of content, but just filling up the space to make
+                        it look, at least at first glance, a bit more representative of how this would look in a
+                        real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card bg-light border-0">
+              <img src="./images/development.jpg" class="img-fluid card-img-top rounded-0">
+              <div class="card-body">
+                <h5 class="lead text-danger text-uppercase mb-4">Development approach</h5>
+                <div class="accordion accordion-flush" id="accordionFlushExample2">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFour">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        Accordion Item #4
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                      data-bs-parent="#accordionFlushExample2">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        Accordion Item #5
+                      </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                      data-bs-parent="#accordionFlushExample2">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body.
+                        Let's imagine this being filled with some actual content.</div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        Accordion Item #6
+                      </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                      data-bs-parent="#accordionFlushExample2">
+                      <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body.
+                        Nothing more exciting happening here in terms of content, but just filling up the space to make
+                        it look, at least at first glance, a bit more representative of how this would look in a
+                        real-world application.</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- team section with modal structure -->
 
+    <section id="team" class="generic">
+      <div class="container">
+        <h2 class="display-5 text-danger mb-5">THE TEAM</h2>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- butonun var olduğu sütunun tamamını kapsaması için grid classını kullanıyoruz-->
+          <div class="col p-0">
+            <div class="d-grid bg-danger py-5">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-danger rounded-0 py-5" data-bs-toggle="modal"
+                data-bs-target="#baseModal" data-username="JANE MAYAKOVSKI">
+                <span class="lead">DESIGNER </span>
+              </button>
+            </div>
+          </div>
+          <div class="col p-0">
+            <div class="d-grid bg-warning py-5">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-warning rounded-0 py-5" data-bs-toggle="modal"
+                data-bs-target="#baseModal" data-username="JOHN DOE">
+                <span class="lead">DEVELOPER</span>
+              </button>
+            </div>
+          </div>
+          <div class="col p-0">
+            <div class="d-grid bg-success py-5">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-success rounded-0 py-5" data-bs-toggle="modal"
+                data-bs-target="#baseModal" data-username="PHOEBE">
+                <span class="lead">ENGINEER </span>
+              </button>
+            </div>
+          </div>
+          <div class="col p-0">
+            <div class="d-grid bg-info py-5">
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-info rounded-0 py-5" data-bs-toggle="modal"
+                data-bs-target="#baseModal" data-username="JOEY">
+                <span class="lead">ARTIST</span>
+              </button>
+              <!-- buradaki butonlara bastıktan sonra ilgili modal yapısının açılması için  data-bs-target ile id'nin aynı olması gerekiyor-->
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="modal fade" id="baseModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
+            <div class="modal-body">
+              <img src="./images/team1.jpg" class="img-fluid">
+              <h5 class="lead text-danger mt-2" id="lead"></h5>
+              <p>Utilize the Bootstrap grid system within a modal by nesting .container-fluid within the .modal-body.
+                Then, use the normal grid system classes as you would anywhere else.</p>
+              <ul class="list-unstyled ">
+                <li>Lorem ipsum dolor sit amet</li>
+                <li>Lorem ipsum dolor sit amet</li>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet</li>
+                  <li>Lorem ipsum dolor sit amet</li>
+                </ul>
+                <li>
+                <li>Lorem ipsum dolor sit amet</li>
+              </ul>
 
+              <div class="btn-group w-100" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-warning rounded-0">LINKEDIN</button>
+                <button type="button" class="btn btn-success rounded-0">GİTHUB</button>
+                <button type="button" class="btn btn-info rounded-0">TWİTTER</button>
+              </div>
+            </div>
 
+          </div>
+        </div>
+      </div>
 
+    </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"></script>
+</body>
 
-
-
-        </section>
-
-
-
-         
-
-        
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
-  </body>
 </html>
